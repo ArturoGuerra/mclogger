@@ -2,11 +2,10 @@ FROM golang:buster AS builder
 
 WORKDIR /build
 COPY . .
-RUN apt update && apt install build-essential
-RUN make build
+RUN go build -o bin/mclogger main.go
 
 FROM debian:buster
 WORKDIR /app
-COPY --from=builder /build/mclogger /app
+COPY --from=builder /build/bin/mclogger /app
 
 CMD ["./mclogger"]
