@@ -15,7 +15,7 @@ func main() {
     })
 
     for line := range t.Lines() {
-        fmt.Println(line)
+        fmt.Println(line.String())
     }
 
     if t.Err() != nil {
