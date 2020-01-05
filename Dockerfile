@@ -1,11 +1,11 @@
-FROM golang:alpine AS builder
+FROM golang:buster AS builder
 
 WORKDIR /build
 COPY . .
 RUN apk add --update make
 RUN make build
 
-FROM alpine:latest
+FROM debian:buster
 WORKDIR /app
 COPY --from=builder /build/mclogger /app
 
