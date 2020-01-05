@@ -1,3 +1,5 @@
+github.com/Kelwing/mc-rcon v0.0.0-20191221214055-1f327b337f77 h1:4iotpbMl1dl6h/htbqKCnYQFCIxyV7F1ce+anGXLyCY=
+github.com/Kelwing/mc-rcon v0.0.0-20191221214055-1f327b337f77/go.mod h1:wlXY/EO9CBjMViEh95JOQhp//RMnHs4ZUBhYhx43LdM=
 github.com/bwmarrin/discordgo v0.20.2 h1:nA7jiTtqUA9lT93WL2jPjUp8ZTEInRujBdx1C9gkr20=
 github.com/bwmarrin/discordgo v0.20.2/go.mod h1:O9S4p+ofTFwB02em7jkpkV8M3R0/PUVOwN61zSZ0r4Q=
 github.com/fsnotify/fsnotify v1.4.7 h1:IXs+QLmnXW2CcXuY+8Mzv/fWEsPGWxqefPtCP5CnV9I=
