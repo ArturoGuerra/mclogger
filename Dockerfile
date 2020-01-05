@@ -2,7 +2,7 @@ FROM golang:buster AS builder
 
 WORKDIR /build
 COPY . .
-RUN apt install build-essential
+RUN apt update && apt install build-essential
 RUN make build
 
 FROM debian:buster
