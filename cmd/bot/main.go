@@ -23,10 +23,12 @@ func init() {
 func main() {
     dgo, err := discordgo.New("Bot " + TOKEN)
     if err != nil {
-        panic(err)
+        fmt.Println(err)
+        return
     }
 
-    if err = dgo.Open(); err != nil {
+    err = dgo.Open()
+    if err != nil {
         fmt.Println(err)
         return
     }
