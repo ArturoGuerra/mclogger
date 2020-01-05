@@ -4,7 +4,6 @@ import (
     "io"
     "fmt"
     "os"
-
     "github.com/papertrail/go-tail/follower"
 )
 
