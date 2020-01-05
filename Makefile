@@ -9,5 +9,5 @@ clean:
 	rm -rf bin
 
 build: clean
-	$(GOBUILD) -o bin/mclogger main.go
+	$(GOBUILD) -o bin/mclogger cmd/bot/main.go
 
