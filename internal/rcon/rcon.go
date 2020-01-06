@@ -47,6 +47,13 @@ func New(session *discordgo.Session, message *discordgo.MessageCreate) {
     if err != nil {
         session.ChannelMessageSend(message.ChannelID, err.Error())
     } else {
-        session.ChannelMessageSend(message.ChannelID, resp)
+        var msg string
+        if resp == "" {
+            msg = "Command executed successfully!"
+        } else {
+            msg = resp
+        }
+
+        session.ChannelMessageSend(message.ChannelID, msg)
     }
 }
