@@ -37,7 +37,7 @@ func main() {
         return
     }
 
-    logger.New(dgo)
+    go logger.New(dgo)
     dgo.AddHandler(func (s *discordgo.Session, m *discordgo.MessageCreate) {
         fmt.Println(CMD_CHANNEL)
         fmt.Println(m.ChannelID)
