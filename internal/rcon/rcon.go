@@ -42,7 +42,6 @@ func New(session *discordgo.Session, message *discordgo.MessageCreate) {
     }
 
     command := getcommand(message.Content)
-    fmt.Println(command)
     resp, err := conn.SendCommand(command)
     if err != nil {
         session.ChannelMessageSend(message.ChannelID, err.Error())
