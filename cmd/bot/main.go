@@ -39,7 +39,7 @@ func main() {
 
     go logger.New(dgo)
     dgo.AddHandler(func (s *discordgo.Session, m *discordgo.MessageCreate) {
-        if m.ChannelID == CMD_CHANNEL && strings.HasPrefix(m.Content, "-rcon ")  {
+        if m.ChannelID == CMD_CHANNEL && strings.HasPrefix(m.Content, "/")  {
            rcon.New(s, m)
         }
     })

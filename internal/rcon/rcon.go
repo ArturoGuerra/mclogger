@@ -21,7 +21,7 @@ func init() {
 }
 
 func getcommand(message string) string {
-    return strings.TrimPrefix(message, "-rcon ")
+    return strings.TrimPrefix(message, "/")
 }
 
 func New(session *discordgo.Session, message *discordgo.MessageCreate) {
