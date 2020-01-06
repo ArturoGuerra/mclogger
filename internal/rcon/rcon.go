@@ -21,7 +21,7 @@ func init() {
 }
 
 func getcommand(message string) string {
-    return strings.TrimPrefix(message, "-rcon")
+    return strings.TrimPrefix(message, "-rcon ")
 }
 
 func New(session *discordgo.Session, message *discordgo.MessageCreate) {
@@ -42,6 +42,7 @@ func New(session *discordgo.Session, message *discordgo.MessageCreate) {
     }
 
     command := getcommand(message.Content)
+    fmt.Println(command)
     resp, err := conn.SendCommand(command)
     if err != nil {
         session.ChannelMessageSend(message.ChannelID, err.Error())
